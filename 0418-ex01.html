@@ -20,22 +20,18 @@
     <!--Initially, we will use the babel run-time library to convert JSX in the browser -->
     <script src="https://unpkg.com/babel-standalone/babel.min.js"></script>
 
-    <script>
+    <script type="text/babel">
       /* There are several ways of creating a React component.
          Here we are using a function (called a functional component) */
       function Company() {
         return (
           <article className="box media ">
-            
             <div className="media-left">
-              
               <figure className="image is-128x128">
-                
                 <img src="images/FB.svg" />
               </figure>
             </div>
             <div className="media-content">
-              
               <h2>Facebook</h2>
               <p>
                 <strong>Symbol:</strong> FB
@@ -48,7 +44,6 @@
               </p>
             </div>
             <div className="media-right">
-              
               <button className="button is-link">Edit</button>
             </div>
           </article>
@@ -58,7 +53,8 @@
       /*
           We now need to add the just-defined component to the browser DOM
       */
-      const container = document.querySelector('#react-container');    ReactDOM.createRoot(container).render(<Company />);    
+      const container = document.querySelector("#react-container");
+      ReactDOM.createRoot(container).render(<Company />);
     </script>
   </head>
   <body>
