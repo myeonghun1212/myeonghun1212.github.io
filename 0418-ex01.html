@@ -26,31 +26,31 @@
       function Company() {
         return (
           <article className="box media ">
-            {" "}
+            
             <div className="media-left">
-              {" "}
+              
               <figure className="image is-128x128">
-                {" "}
-                <img src="images/FB.svg" />{" "}
-              </figure>{" "}
+                
+                <img src="images/FB.svg" />
+              </figure>
             </div>
             <div className="media-content">
-              {" "}
-              <h2>Facebook</h2>{" "}
+              
+              <h2>Facebook</h2>
               <p>
                 <strong>Symbol:</strong> FB
-              </p>{" "}
+              </p>
               <p>
                 <strong>Sector:</strong> Internet Software and Services
-              </p>{" "}
+              </p>
               <p>
                 <strong>HQ:</strong> Menlo Park, California
-              </p>{" "}
+              </p>
             </div>
             <div className="media-right">
-              {" "}
-              <button className="button is-link">Edit</button>{" "}
-            </div>{" "}
+              
+              <button className="button is-link">Edit</button>
+            </div>
           </article>
         );
       }
@@ -58,6 +58,7 @@
       /*
           We now need to add the just-defined component to the browser DOM
       */
+      const container = document.querySelector('#react-container');    ReactDOM.createRoot(container).render(<Company />);    
     </script>
   </head>
   <body>
