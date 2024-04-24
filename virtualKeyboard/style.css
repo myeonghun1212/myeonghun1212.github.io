@@ -1,0 +1,13 @@
+.container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(15, 1fr);
+    background-color: blanchedalmond;
+    
+}
+.btn{
+    background-color:aquamarine;
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer
+}

@@ -15,5 +15,6 @@
 내 웹 프로그래밍에서 주로 쓰이는 스프링 프레임워크를 간단히 학습한다.
 - 기말과제에서는 데이터베이스를 활용하는 웹사이트의 설계 구현한 결과물을 바탕으로 평가한다.
 
-# Evaluation Weights
-- Midterm 35%, Final 35%, Attendance 10%, Homework 20%
+
+## 시험 참고 자료
+https://studiomeal.com/archives/533
