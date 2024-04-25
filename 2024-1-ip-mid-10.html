@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      function addMenu(target, id, name) {
+        const newElement = document.createElement("li");
+        newElement.innerHTML = name;
+        newElement.id = id;
+        newElement.addEventListener("mouseenter", function () {
+          newElement.innerHTML += " ◀";
+        });
+        newElement.addEventListener("mouseleave", function () {
+          newElement.innerHTML = name;
+        });
+        newElement.addEventListener("click", function () {
+          alert(name);
+        });
+        target.appendChild(newElement);
+      }
+
+      menu = [
+        {
+          id: "news",
+          name: "뉴스",
+        },
+        {
+          id: "notice",
+          name: "소식",
+        },
+        {
+          id: "research",
+          name: "연구",
+        },
+        {
+          id: "service",
+          name: "서비스",
+        },
+        {
+          id: "sns",
+          name: "SNS",
+        },
+      ];
+
+      document.addEventListener("DOMContentLoaded", function () {
+        target = document.getElementById("leftmenu");
+        menu.forEach((element) => {
+          addMenu(target, element.id, element.name);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <ul id="leftmenu"></ul>
+  </body>
+</html>

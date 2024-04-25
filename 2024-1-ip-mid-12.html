@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        width: 300px;
+        height: 350px;
+        gap: 10px;
+        grid-template-columns: repeat(4, 1fr);
+        background-color: blanchedalmond;
+      }
+      .btn {
+        background-color: aquamarine;
+        text-align: center;
+        border: 1px solid black;
+        cursor: pointer;
+        line-height: 60px;
+      }
+      .btn:hover {
+        background-color:cadetblue;
+      }
+      #plus {
+        grid-column: 4;
+        grid-row: 2 / span 2;
+        line-height: 120px;
+      }
+      #enter {
+        grid-column: 4;
+        grid-row: 4 / span 2;
+        line-height: 120px;
+      }
+      #zero {
+        grid-column: 1 / span 2;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        btn = document.querySelectorAll(".btn");
+        textBox = document.querySelector("#textBox");
+
+        btn.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            GetValue(button);
+          });
+         
+        });
+      });
+
+      function Enter() {
+        alert(textBox.value);
+      }
+
+      function Backspace() {
+        textBox.value = textBox.value.slice(0, -1);
+      }
+
+      function GetValue(button) {
+        const data = { enter: Enter, "←": Backspace };
+        // console.log(button.textContent in data);
+        if (button.textContent in data) {
+          data[button.textContent]();
+        } else {
+          textBox.value += button.textContent;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div style="text-align: center; margin: 30px">
+      <input id="textBox" type="text" />
+    </div>
+    <div class="container">
+      <!-- 1번째줄 -->
+      <div class="btn">←</div>
+      <div class="btn">/</div>
+      <div class="btn">*</div>
+      <div class="btn">-</div>
+
+      <div class="btn">7</div>
+      <div class="btn">8</div>
+      <div class="btn">9</div>
+      <div class="btn" id="plus">+</div>
+
+      <div class="btn">4</div>
+      <div class="btn">5</div>
+      <div class="btn">6</div>
+
+      <div class="btn">1</div>
+      <div class="btn">2</div>
+      <div class="btn">3</div>
+      <div class="btn" id="enter">enter</div>
+
+      <div class="btn" id="zero">0</div>
+      <div class="btn">.</div>
+    </div>
+  </body>
+</html>

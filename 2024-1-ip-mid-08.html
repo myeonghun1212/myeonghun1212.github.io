@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+      #box {
+        width: 720px;
+        height: 480px;
+        background-color: gray;
+        overflow: auto;
+      }
+      #header {
+        width: 100%;
+        border: 2px solid black;
+      }
+
+      #header ul {
+        display: inline-block;
+        overflow: hidden;
+      }
+      #header li {
+        list-style: none;
+        float: left;
+        padding: 15px;
+      }
+      #header li:first-child {
+        border-radius: 10px 0 0 10px;
+      }
+      #header li:last-child {
+        border-radius: 0 10px 10px 0;
+      }
+      #header li:nth-child(2n) {
+        background-color: #ff0003;
+      }
+      #header li:nth-child(2n + 1) {
+        background-color: #800000;
+      }
+      #inside{
+        display: flex;
+        width: 100%;
+      }
+      #sidebar {
+        flex: 1 1 0;
+        background-color: gray;
+        height: auto;
+      }
+      article{
+        flex: 4 1 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="box">
+        <header id="header">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/7/75/Inha_University_logotype.png"
+          />
+          <ul>
+            <li>첫 번째</li>
+            <li>두 번째</li>
+            <li>세 번째</li>
+            <li>네 번째</li>
+            <li>다섯 번째</li>
+            <li>여섯 번째</li>
+            <li>일곱 번째</li>
+          </ul>
+        </header>
+        <div id="inside">
+          <div id="sidebar">
+            <ul id="leftmenu">
+              <li id="news">뉴스</li>
+              <li id="notice">소식</li>
+              <li id="research">연구</li>
+              <li id="service">서비스</li>
+              <li id="sns">SNS</li>
+            </ul>
+          </div>
+          <article>
+            <h2>창학이념과 교육목표</h2>
+            <h3>인격도야, 진리탐구, 사회봉사</h3>
+            <p>
+              1954년 조국부강, 민족번영의 염원으로 개교하여 창의, 근면, 봉사의
+              창학정신을 구현하기 위한 인격도야, 진리탐구, 사회봉사의 3대 교육
+              이념을 표방하고 있다.
+            </p>
+            <p>
+              이는 교훈 「眞」과 함께 연구하는 대학으로서의 참된 인간 수련을 통하여
+              국가와 인류사회 발전에 공헌하려는 의욕적 자세와 세계로 웅비하는 발전
+              「仁荷」의 의지 및 진리 탐구를 위한 학문에의 열정을 집약한 것이다.
+              위의 이념을 기초로 우리 대학은 인격을 도야하고, 건전한 사상을 함양하는
+              동시에 심오한 학술이론과 그 응용방법을 연구, 교수하여 국가와
+              인류사회발전에 공헌할 수 있는 지도적 인재양성을 교육목적으로 두고
+              있다.
+            </p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
